@@ -20,5 +20,9 @@ export const taskService = {
         })
 
         return task
+    },
+    async delete(id: string) {
+        const deleted = await client.task.delete({ where: { id } })
+        return deleted
     }
 }

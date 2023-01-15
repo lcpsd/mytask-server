@@ -11,7 +11,7 @@ export const taskController = {
             })
             return res.status(200).json(task)
         } catch (error) {
-            throw new Error(error.message)
+            throw new Error("Error when try to create")
         }
     },
     async read(req: Request, res: Response) {
@@ -19,7 +19,7 @@ export const taskController = {
             const task = await taskService.read(req.params.id)
             return res.status(200).json(task)
         } catch (error) {
-            throw new Error(error.message)
+            throw new Error("Error when try to read")
         }
     },
 
@@ -28,7 +28,16 @@ export const taskController = {
             const task = await taskService.update(req.params.taskId, req.body)
             return res.status(200).json(task)
         } catch (error) {
-            throw new Error(error.message)
+            throw new Error("Error when try to update")
+        }
+    },
+
+    async delete(req: Request, res: Response) {
+        try {
+            const task = await taskService.delete(req.params.taskId)
+            return res.status(200).json(task)
+        } catch (error) {
+            throw new Error("Error when try to delete")
         }
     }
 }
