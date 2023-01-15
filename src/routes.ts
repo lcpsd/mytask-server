@@ -3,6 +3,8 @@ import { upload } from "./config/multer";
 import { authController } from "./controllers/auth";
 import { taskController } from "./controllers/task";
 import { userController } from "./controllers/user";
+import { createMiddleware } from "./middlewares/create";
+import { readModifyTaskMiddleware } from "./middlewares/readModifyTask";
 
 const router = Router()
 
@@ -10,7 +12,8 @@ const router = Router()
 router.post("/user", userController.create)
 
 /* ---------------------------------- Task ---------------------------------- */
-router.post("/task/user/:userId", upload.single("image"), taskController.create)
+router.post("/task/user/:userId", createMiddleware, upload.single("image"), taskController.create)
+router.get("/task/:taskId", readModifyTaskMiddleware, taskController.read)
 
 /* ---------------------------------- Auth ---------------------------------- */
 router.post("/auth", authController.login)

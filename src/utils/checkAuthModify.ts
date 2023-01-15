@@ -9,7 +9,6 @@ export async function checkAuthModify(
     checkField: string,
 ) {
 
-
     const data = await client[modelName].findFirst({ where: { id } })
 
     const [, token] = bearer.split(" ")

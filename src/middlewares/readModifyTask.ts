@@ -1,7 +1,7 @@
 import { NextFunction, Request, Response } from "express";
 import { checkAuthModify } from "../utils/checkAuthModify";
 
-export async function modifyTaskMiddleware(req: Request, res: Response, next: NextFunction) {
+export async function readModifyTaskMiddleware(req: Request, res: Response, next: NextFunction) {
     const { authorization: bearer } = req.headers
 
     if (!bearer) {

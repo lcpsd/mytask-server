@@ -13,5 +13,13 @@ export const taskController = {
         } catch (error) {
             throw new Error(error.message)
         }
+    },
+    async read(req: Request, res: Response) {
+        try {
+            const task = await taskService.read(req.params.id)
+            return res.status(200).json(task)
+        } catch (error) {
+            throw new Error(error.message)
+        }
     }
 }
