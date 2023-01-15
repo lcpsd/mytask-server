@@ -1,12 +1,14 @@
 import Express, { NextFunction, Request, Response } from "express"
 import cors from "cors"
 import "express-async-errors"
+import { router } from "./routes"
 import path from "path"
 
 const app = Express()
 
 app.use(Express.json())
 app.use(cors())
+app.use(router)
 app.use("/images", Express.static(path.resolve(__dirname, "..", "public/images")))
 app.use("/files", Express.static(path.resolve(__dirname, "..", "public")))
 
