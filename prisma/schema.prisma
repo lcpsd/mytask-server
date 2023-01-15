@@ -11,12 +11,25 @@ datasource db {
 }
 
 model User {
-  id           String    @id @default(uuid())
-  name         String
-  email        String
-  passwordHash String
-  created_at   DateTime? @default(now())
-  updated_at   DateTime? @default(now())
+  id         String    @id @default(uuid())
+  name       String
+  email      String
+  password   String
+  tasks      Task[]
+  created_at DateTime? @default(now())
+  updated_at DateTime? @default(now())
 
-  @@map("User")
+  @@map("user")
+}
+
+model Task {
+  id         String    @id @default(uuid())
+  title      String
+  status     String
+  user_id    String
+  created_at DateTime? @default(now())
+  updated_at DateTime? @default(now())
+  user       User      @relation(fields: [user_id], references: [id])
+
+  @@map("task")
 }

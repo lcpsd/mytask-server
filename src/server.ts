@@ -15,7 +15,7 @@ app.use("/files", Express.static(path.resolve(__dirname, "..", "public")))
 app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
     if (err instanceof Error) {
         return res.status(400).json({
-            error: "An error has occurred"
+            error: err.message
         })
     }
 
