@@ -21,5 +21,14 @@ export const taskController = {
         } catch (error) {
             throw new Error(error.message)
         }
+    },
+
+    async update(req: Request, res: Response) {
+        try {
+            const task = await taskService.update(req.params.taskId, req.body)
+            return res.status(200).json(task)
+        } catch (error) {
+            throw new Error(error.message)
+        }
     }
 }
