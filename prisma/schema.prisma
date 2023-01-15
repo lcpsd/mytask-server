@@ -25,7 +25,8 @@ model User {
 model Task {
   id         String    @id @default(uuid())
   title      String
-  status     String
+  status     String    @default("pending")
+  image      String?
   user_id    String
   created_at DateTime? @default(now())
   updated_at DateTime? @default(now())

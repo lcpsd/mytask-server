@@ -3,8 +3,13 @@ import { userService } from "../services/user";
 
 export const userController = {
     async create(req: Request, res: Response) {
-        const user = await userService.create(req.body)
-        return res.status(200).json(user)
+        try {
+            const user = await userService.create(req.body)
+            return res.status(200).json(user)
+
+        } catch (error) {
+            throw new Error(error.message)
+        }
     },
     async read(req: Request, res: Response) {
 
