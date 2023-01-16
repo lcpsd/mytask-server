@@ -4,12 +4,9 @@
 #### An api to serve a todo list, that's allow to CRUD users, tasks and login by JWT.
 
 ## Techs
-<img src="https://i.imgur.com/0RLCzHi.png" alt="drawing" width="80"/>
-<img src="https://i.imgur.com/gSZCHsa.png" alt="drawing" width="80"/>
-<img src="https://i.imgur.com/ou8ETDQ.png" alt="drawing" width="80"/>
-<img src="https://i.imgur.com/zYIpiVo.png" alt="drawing" width="80"/>
-<img src="https://i.imgur.com/I5hij63.png" alt="drawing" width="80"/>
-<img src="https://i.imgur.com/axG0zEM.png" alt="drawing" width="80"/>
+<img src="https://i.imgur.com/0RLCzHi.png" alt="nodejs" width="80"/>  | <img src="https://i.imgur.com/gSZCHsa.png" alt="express" width="80"/> | <img src="https://i.imgur.com/ou8ETDQ.png" alt="typescript" width="80"/> | <img src="https://i.imgur.com/zYIpiVo.png" alt="prisma" width="80"/> | <img src="https://i.imgur.com/I5hij63.png" alt="jwt" width="80"/> | <img src="https://i.imgur.com/axG0zEM.png" alt="postgres" width="80"/>
+|--|--|--|--|--|--
+|  |  | | | 
 
 ## Intructions
 
