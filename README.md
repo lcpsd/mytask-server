@@ -17,6 +17,7 @@
  - `JWT_SECRET="hipersecrethash"`
  3. After clone this repository, run `yarn` on terminal to install dependences
  4. Run `yarn prisma migrate dev` to create tables and columns on database
+ 5. Run `yarn dev` to start server
 
 ## Routes
 #### User
