@@ -9,6 +9,9 @@ import { readModifyUserMiddleware } from "./middlewares/readModifyUser";
 
 const router = Router()
 
+/* --------------------------------- Default -------------------------------- */
+router.get("/", (req, res) => res.send("ok"))
+
 /* ---------------------------------- User ---------------------------------- */
 router.post("/user", userController.create)
 router.get("/user/:userId", readModifyUserMiddleware, userController.read)
