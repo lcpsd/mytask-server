@@ -29,6 +29,11 @@ export const userController = {
         }
     },
     async delete(req: Request, res: Response) {
-
+        try {
+            const user = await userService.delete(req.params.userId)
+            return res.status(200).json(user)
+        } catch (error) {
+            throw new Error("Error when try to update")
+        }
     },
 }

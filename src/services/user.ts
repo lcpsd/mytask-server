@@ -54,6 +54,11 @@ export const userService = {
     },
 
     async delete(id: string) {
+        const deleted = client.user.delete({
+            where: { id },
+            select: { id: true, name: true, email: false }
+        })
 
+        return deleted
     }
 }
