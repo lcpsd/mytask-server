@@ -11,9 +11,10 @@
 ## Intructions
 
  1. Create a local database using Postgresql
- 2. Create a .env file with follow params
- `DATABASE_URL="postgresql://user:pass@localhost:5432/mytask?schema=public"
- JWT_SECRET="hipersecrethash"`
+ 2. Create a .env file with the follow params:
+ - `DATABASE_URL="postgresql://user:pass@localhost:5432/mytask?schema=public"`
+ 
+ - `JWT_SECRET="hipersecrethash"`
  3. After clone this repository, run `yarn` on terminal to install dependences
  4. Run `yarn prisma migrate dev` to create tables and columns on database
 
