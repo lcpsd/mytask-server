@@ -2,6 +2,16 @@
 # Mytask Server
 #### An api to serve a todo list, that's allow to CRUD users, tasks and login by JWT.
 
+## Techs
+
+ - Nodejs
+ - Express
+ - Typescript
+ - Multer
+ - Prisma
+ - Bcrypt
+ - JWT
+
 ## Intructions
 
  1. Create a database with postgresql, local or with docker
