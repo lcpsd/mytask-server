@@ -13,17 +13,17 @@
 
 ## Routes
 #### User
-| Method | Route | Params | Header
-| --- | --- | --- | --- |
-| GET | /user/:userId | null
-| POST | /user/:userId | { name: string, email: string, password: string } | Bearer Token
-| PUT | /user/:userId | { name?: string, email?: string, password?: string } | Bearer Token
-| DELETE | /user/:userId | null | Bearer Token
+| Method | Route | Params | Header | Request Format
+| --- | --- | --- | --- | --- |
+| GET | /user/:userId | null | null | Query
+| POST | /user/:userId | { name: string, email: string, password: string } | Bearer Token | Json
+| PUT | /user/:userId | { name?: string, email?: string, password?: string } | Bearer Token | Json
+| DELETE | /user/:userId | null | Bearer Token | Query
 
 #### Task
 | Method | Route | Params | Header | Request Format
 | --- | --- | --- | --- | --- |
-| GET | /user/:userId | null | null
+| GET | /user/:userId | null | null | Query
 | POST | /user/:userId | { title: string, status: "pending"  or  "done"  or  "filed", image?: string or null, user_id: string } | Bearer Token | Multipart Form
 | PUT | /user/:userId | { title: string, status: "pending" or  "done"  or  "filed", image?: string or null, user_id: string } | Bearer Token | Multipart Form
-| DELETE | /user/:userId | null | Bearer Token
+| DELETE | /user/:userId | null | Bearer Token | Query
