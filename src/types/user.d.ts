@@ -3,3 +3,7 @@ export interface NewUserProps {
     email: string,
     password: string
 }
+
+export interface UpdateUserProps extends Partial<NewUserProps> {
+
+}

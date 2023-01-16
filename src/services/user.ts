@@ -29,5 +29,17 @@ export const userService = {
         })
 
         return user
+    },
+
+    async read(id: string) {
+        const user = client.user.findFirst({
+            where: { id },
+            select: {
+                id: true,
+                email: true,
+                name: true,
+            }
+        })
+        return user
     }
 }
