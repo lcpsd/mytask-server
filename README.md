@@ -21,15 +21,15 @@
 #### User
 | Method | Route | Params | Header | Request Format
 | --- | --- | --- | --- | --- |
-| GET | /user/:userId | null | null | Query
-| POST | /user/:userId | { name: string, email: string, password: string } | Bearer Token | Json
-| PUT | /user/:userId | { name?: string, email?: string, password?: string } | Bearer Token | Json
-| DELETE | /user/:userId | null | Bearer Token | Query
+| ![](https://img.shields.io/badge/-GET-blue) | /user/:userId | null | null | Query
+| ![](https://img.shields.io/badge/-POST-green) | /user/:userId | { name: string, email: string, password: string } | Bearer Token | Json
+| ![](https://img.shields.io/badge/-PUT-yellow)| /user/:userId | { name?: string, email?: string, password?: string } | Bearer Token | Json
+| ![](https://img.shields.io/badge/-Delete-red) | /user/:userId | null | Bearer Token | Query
 
 #### Task
 | Method | Route | Params | Header | Request Format
 | --- | --- | --- | --- | --- |
-| GET | /user/:userId | null | null | Query
-| POST | /user/:userId | { title: string, status: "pending"  or  "done"  or  "filed", image?: string or null, user_id: string } | Bearer Token | Multipart Form
-| PUT | /user/:userId | { title: string, status: "pending" or  "done"  or  "filed", image?: string or null, user_id: string } | Bearer Token | Multipart Form
-| DELETE | /user/:userId | null | Bearer Token | Query
+| ![](https://img.shields.io/badge/-GET-blue) | /user/:userId | null | null | Query
+| ![](https://img.shields.io/badge/-POST-green) | /user/:userId | { title: string, status: "pending"  or  "done"  or  "filed", image?: string or null, user_id: string } | Bearer Token | Multipart Form
+| ![](https://img.shields.io/badge/-PUT-yellow) | /user/:userId | { title: string, status: "pending" or  "done"  or  "filed", image?: string or null, user_id: string } | Bearer Token | Multipart Form
+| ![](https://img.shields.io/badge/-Delete-red) | /user/:userId | null | Bearer Token | Query
