@@ -1,3 +1,5 @@
+import { Prisma, Task } from "@prisma/client";
+import { createPaginator } from "prisma-pagination";
 import { client } from "../config/prisma";
 import { NewTaskProps, UpdateTaskProps } from "../types/task";
 
@@ -12,6 +14,25 @@ export const taskService = {
             where: { id }
         })
         return task
+    },
+
+    async readMany(page: string, userId: string) {
+        const paginate = createPaginator({ perPage: 20 })
+
+        const tasks = await paginate<Task, Prisma.TaskFindManyArgs>(
+            client.task,
+            {
+                where: {
+                    user_id: userId
+                },
+                orderBy: {
+                    id: 'asc'
+                }
+            },
+            { page }
+        )
+
+        return tasks
     },
 
     async update(id: string, data: UpdateTaskProps) {
