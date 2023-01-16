@@ -10,8 +10,6 @@ export async function readModifyUserMiddleware(req: Request, res: Response, next
 
     const check = await checkAuthModify(bearer, req.params.userId, "user", "id")
 
-    console.log(check)
-
     if (check) {
         next()
     } else {

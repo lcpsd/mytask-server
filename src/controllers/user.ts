@@ -21,7 +21,12 @@ export const userController = {
         }
     },
     async update(req: Request, res: Response) {
-
+        try {
+            const user = await userService.update(req.params.userId, req.body)
+            return res.status(200).json(user)
+        } catch (error) {
+            throw new Error("Error when try to update")
+        }
     },
     async delete(req: Request, res: Response) {
 

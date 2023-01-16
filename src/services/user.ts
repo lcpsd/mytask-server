@@ -1,6 +1,6 @@
 import { hash } from "bcryptjs";
 import { client } from "../config/prisma";
-import { NewUserProps } from "../types/user";
+import { NewUserProps, UpdateUserProps } from "../types/user";
 
 export const userService = {
     async create(data: NewUserProps) {
@@ -41,5 +41,19 @@ export const userService = {
             }
         })
         return user
+    },
+
+    async update(id: string, data: UpdateUserProps) {
+        const user = client.user.update({
+            where: { id },
+            data,
+            select: { id: true, name: true, email: false }
+        })
+
+        return user
+    },
+
+    async delete(id: string) {
+
     }
 }
