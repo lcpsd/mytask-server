@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "ts-node-dev --respawn --transpile-only --exit-child --watch src src/server.ts",
-    "start": "node build/index.js",
+    "start": "node build/server.js",
     "build": "prisma migrate deploy && tsc --project tsconfig.json"
   },
   "license": "MIT",
