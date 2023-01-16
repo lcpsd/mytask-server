@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "prisma migrate deploy && ts-node-dev --transpile-only src/server.ts",
-    "dev": "ts-node-dev --respawn --transpile-only --exit-child --watch src src/server.ts"
+    "dev": "ts-node-dev --respawn --transpile-only --exit-child --watch src src/server.ts",
+    "start": "node build/index.js",
+    "build": "tsc --project tsconfig.json"
   },
   "license": "MIT",
   "dependencies": {
