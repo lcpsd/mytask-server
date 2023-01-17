@@ -11,7 +11,7 @@
 ## Routes
 #### User
 Hosting: `https://mytask-api.up.railway.app`
-| Method | Route | Params | Header | Request Format
+| Method | Route | Body | Header | Request Format
 | --- | --- | --- | --- | --- |
 | ![](https://img.shields.io/badge/-GET-blue) | /user/:userId | null | null | Query
 | ![](https://img.shields.io/badge/-POST-green) | /user/:userId | { name: string, email: string, password: string } | Bearer Token | Json
@@ -19,7 +19,7 @@ Hosting: `https://mytask-api.up.railway.app`
 | ![](https://img.shields.io/badge/-Delete-red) | /user/:userId | null | Bearer Token | Query
 
 #### Task
-| Method | Route | Params | Header | Request Format
+| Method | Route | Body | Header | Request Format
 | --- | --- | --- | --- | --- |
 | ![](https://img.shields.io/badge/-GET-blue) | /task/:taskId | null | null | Query
 | ![](https://img.shields.io/badge/-GET-blue) | /task/getMany/user/:userId/page/:page | null | null | Query
