@@ -17,7 +17,7 @@ export const taskController = {
     },
     async read(req: Request, res: Response) {
         try {
-            const task = await taskService.readMany(req.params.page, req.params.userId)
+            const task = await taskService.read(req.params.page)
             return res.status(200).json(task)
         } catch (error) {
             throw new Error("Error when try to read")
