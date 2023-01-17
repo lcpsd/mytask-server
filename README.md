@@ -22,6 +22,7 @@ Hosting: `https://mytask-api.up.railway.app`
 | Method | Route | Params | Header | Request Format
 | --- | --- | --- | --- | --- |
 | ![](https://img.shields.io/badge/-GET-blue) | /task/:taskId | null | null | Query
+| ![](https://img.shields.io/badge/-GET-blue) | /task/getMany/user/:userId/page/:page | null | null | Query
 | ![](https://img.shields.io/badge/-POST-green) | /task/user/:userId | { title: string, status: "pending"  or  "done"  or  "filed", image?: string or null, user_id: string } | Bearer Token | Multipart Form
 | ![](https://img.shields.io/badge/-PUT-yellow) | /task/:taskId | { title: string, status: "pending" or  "done"  or  "filed", image?: string or null, user_id: string } | Bearer Token | Multipart Form
 | ![](https://img.shields.io/badge/-Delete-red) | /task/:taskId | null | Bearer Token | Query
