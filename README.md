@@ -9,8 +9,14 @@
 | NodeJs | Express | Typescript | Prisma | JWT | Postgres
 
 ## Routes
-#### User
 Hosting: `https://mytask-api.up.railway.app`
+
+#### Auth
+| Method | Route | Body | Header | Request Format
+| --- | --- | --- | --- | --- |
+| ![](https://img.shields.io/badge/-POST-green) | /auth | { email: string, password: string } | Bearer Token | Json
+
+#### User
 | Method | Route | Body | Header | Request Format
 | --- | --- | --- | --- | --- |
 | ![](https://img.shields.io/badge/-GET-blue) | /user/:userId | null | null | Query
