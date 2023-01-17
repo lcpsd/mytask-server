@@ -14,7 +14,7 @@ Hosting: `https://mytask-api.up.railway.app`
 #### Auth
 | Method | Route | Body | Header | Request Format
 | --- | --- | --- | --- | --- |
-| ![](https://img.shields.io/badge/-POST-green) | /auth | { email: string, password: string } | Bearer Token | Json
+| ![](https://img.shields.io/badge/-POST-green) | /auth | { email: string, password: string } | null | Json
 
 #### User
 | Method | Route | Body | Header | Request Format
