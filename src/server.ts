@@ -9,8 +9,7 @@ const app = Express()
 app.use(Express.json())
 app.use(cors())
 app.use(router)
-app.use("/images", Express.static(path.resolve(__dirname, "..", "public/images")))
-app.use("/files", Express.static(path.resolve(__dirname, "..", "public")))
+app.use("/public", Express.static(path.resolve(__dirname, "..", "public")))
 
 app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
     if (err instanceof Error) {

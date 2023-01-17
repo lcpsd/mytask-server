@@ -16,4 +16,4 @@ function config(folder: string) {
     }
 }
 
-export const upload = multer(config("./public/images"))
+export const upload = multer(config("./public"))
