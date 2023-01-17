@@ -33,6 +33,11 @@ Hosting: `https://mytask-api.up.railway.app`
 | ![](https://img.shields.io/badge/-PUT-yellow) | /task/:taskId | { title: string, status: "pending" or  "done"  or  "filed", image?: string or null, user_id: string } | Bearer Token | Multipart Form
 | ![](https://img.shields.io/badge/-Delete-red) | /task/:taskId | null | Bearer Token | Query
 
+#### Files
+| Method | Route | Body | Header | Request Format
+| --- | --- | --- | --- | --- |
+| ![](https://img.shields.io/badge/-GET-blue) | /public/:fileId | null | null | Query
+
 ## How to run locally
 
  1. Create a local database using Postgresql
